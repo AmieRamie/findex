@@ -83,6 +83,44 @@ crossorigin="anonymous">
   margin-bottom: 20%;
   background:#fff;
   }
+  @media screen and (max-height: 850px) 
+  {
+    .popup{
+      margin-top: -40%;
+  }
+  }
+  @media screen and (max-width: 1250px) 
+  {
+    .popup{
+      margin-top: -45%;
+  }
+  }
+  @media screen and (max-width: 1000px) 
+  {
+    .popup{
+      margin-top: -52%;
+  }
+  }
+  @media screen and (max-width: 850px) 
+  {
+    .popup{
+      margin-top: -60%;
+  }
+  }
+  @media screen and (max-width: 600px) 
+  {
+    #mc_embed_signup{width:90%;}
+    .popup{
+      margin-top: -70%;
+  }
+  }
+  @media screen and (max-width: 475px) 
+  {
+    #mc_embed_signup{width:80%;}
+    .popup{
+      margin-top: -100%;
+  }
+  }
   /* .popup .show {
   visibility: visible !important;
 } */
@@ -820,6 +858,19 @@ path {
 }
 .sof_download {
   margin: auto;
+}
+.dd_toggle {
+  margin:auto;
+}
+@media screen and (max-width: 600px){
+  .dd_toggle {
+  padding-left: 12vw;
+}
+}
+@media screen and (max-width: 440px){
+  .dd_toggle {
+  padding-left: 22vw;
+}
 }
 .sof_download a:not([href]):not([tabindex]){
   color:#fff;
@@ -4550,7 +4601,7 @@ SOFTWARE. -->
   <h2 class="section_headers" id = "thesis">State of Fintech</h2>
 </div>
 <!-- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRqv1L86HOgTAvddIP2R-BrCGyf9E9ibKDTeaFv8GyKL6kzxgoAic5CmTEP-CCqhXJBS6_b_UK4khFO/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="670" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe> -->
-<!-- <div class = "sof_download">
+<div class = "dd_toggle">
   <button class="base-button" style = "max-width: 170px;" id = "SOF_presentation">
     <span class="base-button__text">SoF</span>
   </button>
@@ -4563,7 +4614,7 @@ SOFTWARE. -->
   <button class="base-button" style = "max-width: 170px;" id = "WAM_presentation">
     <span class="base-button__text">WAM</span>
   </button>
-</div> -->
+</div>
 <script>
 document.getElementById("SOF_presentation").onclick = function(){
     document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vSb5TCJK8fumtnZCYPDsEueEV1lhqLJM-LYc5DX3bNWF4ncb0wqqqCjp5CmTdksgraswnKiiLicoBcR/embed?start=false&loop=false&delayms=60000"
@@ -4589,9 +4640,9 @@ document.getElementById("banking_presentation").onclick = function(){
     //showPopup();
 };
 document.getElementById("WAM_presentation").onclick = function(){
-    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vTL36FeqD33D-Kd-_3V7Yx57wWqAQ7kPBFytB0fjpPoClviv-QPoMsx7InZdkKlCb9Vr8eNWthoVk-_/embed?start=false&loop=false&delayms=60000"
+    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vRQXHiiaCNWCNAH4K2NB4JO2g6AjIeljnZb-KOmkcMOY4rY5m_MOOLeLJrrXLjxYwYKAtoyXXEBVAIK/embed?start=false&loop=false&delayms=60000"
     if (showAgain ==false) {
-    document.getElementById("presentation_download").href = "State of Fintech - WAM section.pdf"
+    document.getElementById("presentation_download").href = "SoF - WAM.pdf"
     document.getElementById("presentation_download").download = "SoF - WAM.pdf"
     }
     //showPopup();
