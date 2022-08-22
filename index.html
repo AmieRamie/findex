@@ -83,6 +83,10 @@ crossorigin="anonymous">
   margin-bottom: 20%;
   background:#fff;
   }
+.close-button {
+    outline: none;
+    opacity: 0.3;
+}
   @media screen and (max-height: 850px) 
   {
     .popup{
@@ -846,6 +850,11 @@ path {
   margin-top: 8%;
   border-style: hidden;
 }
+.base-button_2{
+  min-width: 161px;
+  margin-top: 8%;
+  border-style: hidden;
+}
 
 /* .base-button_download{
   min-width: 50px;
@@ -861,17 +870,22 @@ path {
 }
 .dd_toggle {
   margin:auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 600px){
   .dd_toggle {
-  padding-left: 12vw;
+    align-items: center;
+    justify-content: center;
 }
 }
-@media screen and (max-width: 440px){
+/* @media screen and (max-width: 440px){
   .dd_toggle {
   padding-left: 22vw;
 }
-}
+} */
 .sof_download a:not([href]):not([tabindex]){
   color:#fff;
 }
@@ -4602,17 +4616,17 @@ SOFTWARE. -->
 </div>
 <!-- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRqv1L86HOgTAvddIP2R-BrCGyf9E9ibKDTeaFv8GyKL6kzxgoAic5CmTEP-CCqhXJBS6_b_UK4khFO/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="670" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe> -->
 <div class = "dd_toggle">
-  <button class="base-button" style = "max-width: 170px;" id = "SOF_presentation">
-    <span class="base-button__text">SoF</span>
+  <button class="base-button" style = "max-width: 170px; min-height: 68px; margin-left: 8px;" id = "SOF_presentation">
+    <span class="base-button__text">State of Fintech</span>
   </button>
-  <button class="base-button" style = "max-width: 170px;" id = "payments_presentation">
+  <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "payments_presentation">
     <span class="base-button__text">Payments</span>
 </button>
-  <button class="base-button" style = "max-width: 170px;" id = "banking_presentation">
+  <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "banking_presentation">
     <span class="base-button__text">Banking</span>
   </button>
-  <button class="base-button" style = "max-width: 170px;" id = "WAM_presentation">
-    <span class="base-button__text">WAM</span>
+  <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "WAM_presentation">
+    <span class="base-button__text">Wealth & Asset. Mgmt</span>
   </button>
 </div>
 <script>
@@ -4647,6 +4661,7 @@ document.getElementById("WAM_presentation").onclick = function(){
     }
     //showPopup();
 };
+
 </script>
 
 
@@ -4658,6 +4673,8 @@ document.getElementById("WAM_presentation").onclick = function(){
 </div>
 
 <div id="mc_embed_signup" class = "popup">
+  <button id = "popup-close" class="btn-close"  aria-label="Close alert" type="button" data-close>
+  </button>
   <form action="https://fprimecapital.us11.list-manage.com/subscribe/post?u=1429371588554bec356ef353d&amp;id=949b4fa4d6&amp;f_id=00d18ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
       <h2>Subscribe</h2>
@@ -4726,11 +4743,15 @@ document.getElementById("WAM_presentation").onclick = function(){
     } 
     // popup.classList.toggle("show");
   }
+  function closePopUp(){
+    var popup = document.getElementById("mc_embed_signup");
+    popup.style.display = "none";
+  };
 
   document.getElementById("payments_presentation").addEventListener("click", function(){toggleSubscriptionEntry('payments')});
   document.getElementById("banking_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking')});
   document.getElementById("WAM_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking')});
-
+  document.getElementById("popup-close").addEventListener("click", function(){closePopUp()});
 	var mc1Submitted = false;
 	jQuery('#mc-embedded-subscribe-form').on('submit reset', function (event) {
 		console.log(event);
