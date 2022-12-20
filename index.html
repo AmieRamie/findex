@@ -2401,15 +2401,17 @@ function updateAllTime() {
         return (removeType.indexOf(el.type) < 0)&(removeVerticals.indexOf(el.vertical) < 0); 
       });
       proper_tickers = possible_comps_filtered.map(a => a.ticker)
-      //console.log(proper_tickers)
+    
+      console.log(proper_tickers)
       // console.log(data)
       //!!!Market Cap Weighting Index!!!
       new_ft_mcs = ft_market_caps.map(function(a) {return _.pick(a,proper_tickers)}).map(function(i){return Object.values(i).filter(function(x) {return x !== ""}).map(i=>Number(i))}).map(function(i){(i.length>0) ? mc_sum = i.reduce(reducer): mc_sum = 1; return i.map(function(j){return j/mc_sum})})
+      console.log(new_ft_mcs)
       performances = ft_companies.map(function(a) {return _.pick(a,proper_tickers)}).map(function(i){return Object.values(i).filter(function(x) {return x !== ""}).map(i=>Number(i)-1)})
+      console.log(performances)
       //console.log(new_ft_mcs)
-      //console.log(ft_market_caps)
       //console.log(performances)
-      //console.log(ft_companies)
+      console.log(ft_market_caps)
       items = []
       for (index = 0; index < performances.length; index++) {
         items.push(produceAndAdd(performances[index],new_ft_mcs[index]))
@@ -2419,7 +2421,7 @@ function updateAllTime() {
         //   console.log(produceAndAdd(performances[index],new_ft_mcs[index]))
         // }
       }
-      //console.log(items)
+      console.log(items)
       new_ft = items.map(function(i){(i.length>0) ? mc_sum = i.reduce(reducer): mc_sum = NaN; return mc_sum})
       // console.log(new_ft.reduce(function(a,i){return a*new_ft_mcs[i]},0))
       // console.log(new_ft);
@@ -4511,16 +4513,6 @@ SOFTWARE. -->
     <div class="topnav">
       <a href="#home" class="active" onclick="myDropdown3()">Announced IPOs, SPACs, & DLs</a>
       <div id="myLinks3">
-        
-        <a href="https://www.expensify.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Expensify</a>
-        <a href="https://www.etoro.com/en-us/"style = "vertical-align: middle;"><div class="parallelogram"></div> eToro</a>
-        <a href="https://www.aspiration.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Aspiration</a>
-        <a href="https://www.apexfintechsolutions.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Apex</a>
-        <!-- <a href="https://www.moneylion.com/">&#10070; Money Lion</a> -->
-        <!-- <a href="https://www.acorns.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Acorns</a> -->
-        <a href="https://better.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Better</a>
-        <a href="https://better.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Acorns</a>
-        <a href="https://finaccel.co/"style = "vertical-align: middle;"><div class="parallelogram"></div> FinAccel</a>
       </div>
     </div>
     <!-- End smartphone / tablet look -->
@@ -4537,7 +4529,10 @@ SOFTWARE. -->
         <a href="https://www.checkout.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Checkout</a>
         <a href="https://www.revolut.com/en-US"style = "vertical-align: middle;"><div class="parallelogram"></div> Revolut</a>
         <a href="https://www.chime.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Chime</a>
-        <a href="https://ftx.com/en"style = "vertical-align: middle;"><div class="parallelogram"></div> FTX</a>
+        <a href="https://n26.com/en-eu/bank-account"style = "vertical-align: middle;"><div class="parallelogram"></div> N26</a>
+        <a href="https://www.brex.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Brex</a>
+        <a href="https://www.deel.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Deel</a>
+        <a href="https://gusto.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Gusto</a>
       </div>
     </div>
     <!-- End smartphone / tablet look -->
