@@ -8,7 +8,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="lodash.js"></script>
-
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/1429371588554bec356ef353d/07751bcbb6ea019136a0d069c.js");</script>
     <script src="sorttable.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
@@ -75,55 +75,39 @@ crossorigin="anonymous">
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;  z-index: 1;}
+	#mc_embed_signup{background:#EEEEEE; font:18px "Nantes",serif;  width:45%;  z-index: 100; border-radius: 25px;}
   .popup{
   display: none;
-  margin: auto;
-  margin-top: -35%;
-  margin-bottom: 20%;
-  background:#fff;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
-.close-button {
+.btn-close {
     outline: none;
     opacity: 0.3;
+    margin-left: 2%;
+    margin-top: 2%;
 }
-  @media screen and (max-height: 850px) 
-  {
-    .popup{
-      margin-top: -44%;
-  }
-  }
   @media screen and (max-width: 1250px) 
   {
-    .popup{
-      margin-top: -50%;
-  }
+    #mc_embed_signup{width:55%; font:12px "Nantes",serif; max-height: 400px;}
   }
   @media screen and (max-width: 1000px) 
   {
-    .popup{
-      margin-top: -52%;
-  }
+    #mc_embed_signup{width:65%;}
   }
   @media screen and (max-width: 850px) 
   {
-    .popup{
-      margin-top: -60%;
-  }
+    #mc_embed_signup{width:75%;}
   }
   @media screen and (max-width: 600px) 
   {
-    #mc_embed_signup{width:90%;}
-    .popup{
-      margin-top: -70%;
-  }
+    #mc_embed_signup{width:80%;}
   }
   @media screen and (max-width: 475px) 
   {
     #mc_embed_signup{width:80%;}
-    .popup{
-      margin-top: -100%;
-  }
   }
   /* .popup .show {
   visibility: visible !important;
@@ -874,6 +858,7 @@ path {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  
 }
 @media screen and (max-width: 600px){
   .dd_toggle {
@@ -4713,7 +4698,7 @@ document.getElementById("WAM_presentation").onclick = function(){
 
 <iframe id = "google_iframe" src="https://docs.google.com/presentation/d/e/2PACX-1vSb5TCJK8fumtnZCYPDsEueEV1lhqLJM-LYc5DX3bNWF4ncb0wqqqCjp5CmTdksgraswnKiiLicoBcR/embed?start=false&loop=false&delayms=60000" frameborder="0" width="950" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe>
 <div class = "sof_download">
-  <a class="base-button" id = "presentation_download" style = "max-width: 70px;" href = "State of Fintech (SoF).pdf" download = "State of Fintech (SoF).pdf">
+  <a class="base-button" id = "presentation_download" style = "max-width: 70px;" onclick="downloadMessage()">
     <span class="base-button__text"><i class="fa fa-download"></i>Download</span>
   </a>
 </div>
@@ -4723,17 +4708,19 @@ document.getElementById("WAM_presentation").onclick = function(){
   </button>
   <form action="https://fprimecapital.us11.list-manage.com/subscribe/post?u=1429371588554bec356ef353d&amp;id=949b4fa4d6&amp;f_id=00d18ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-      <h2>Subscribe</h2>
-      <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+      <h2 class = 'section_headers' style = "font-size: 1.8em;"><div class="parallelogram" style = 'background:#000; margin-right: 15px;margin-bottom: 5px;transform: skew(-15deg, 0deg);	width: 10px; height: 20px;'></div>Subscribe</h2>
+
 <div class="mc-field-group">
 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 </label>
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
 <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 </div>
-<div class="mc-field-group input-group">
+<!-- <div class="mc-field-group input-group"> </div> -->
   <strong>Fintech verticals you're most interested in: </strong>
-  <ul style = "display: inline-block !important; margin:auto;"><li>
+
+  <ul style = "display: block !important; margin-top:10px; columns: 2;">
+<li>
   <input type="checkbox" value="1" name="group[34178][1]" id="mce-group[34178]-34178-0">
   <label for="mce-group[34178]-34178-0">Banking</label>
 </li>
@@ -4762,14 +4749,18 @@ document.getElementById("WAM_presentation").onclick = function(){
   <label for="mce-group[34178]-34178-6">Crypto/Web3</label>
 </li>
 </ul>
-  <span id="mce-group[34178]-HELPERTEXT" class="helper_text">Select all that apply</span>
-</div>
+
 <div id="mce-responses" class="clear">
   <div class="response" id="mce-error-response" style="display:none"></div>
   <div class="response" id="mce-success-response" style="display:none"></div>
 </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1429371588554bec356ef353d_949b4fa4d6" tabindex="-1" value=""></div>
-  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  <div class="clear">
+    <!-- <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"> -->
+    <button type="submit" class="base-button" style = "max-width: 120px;  min-height: 20px; margin-left: 8px;" id = "mc-embedded-subscribe">
+      <span class="base-button__text">Submit</span>
+    </button>
+  </div>
   </div>
 </form>
 </div>
@@ -4780,11 +4771,12 @@ document.getElementById("WAM_presentation").onclick = function(){
 
 <script>
   var showAgain = true
+  var stop_scroll_popup = false
   var deep_dive_section = 'payments'
   function toggleSubscriptionEntry(deep_dive){
     deep_dive_section  = deep_dive
     var popup = document.getElementById("mc_embed_signup");
-    if (((popup.style.display == "none")|(popup.style.display == ""))&(showAgain==true)) {
+    if (((popup.style.display == "none")|(popup.style.display == ""))&&(showAgain==true)) {
       popup.style.display = "block";
     } 
     // popup.classList.toggle("show");
@@ -4792,8 +4784,46 @@ document.getElementById("WAM_presentation").onclick = function(){
   function closePopUp(){
     var popup = document.getElementById("mc_embed_signup");
     popup.style.display = "none";
+    stop_scroll_popup = true;
   };
 
+  function downloadMessage(){
+    if (showAgain == true){
+    alert("Please subscribe to our email content in order to download our presentations");
+    }
+  };
+
+  $(window).scroll(function (e) {
+    var popup = document.getElementById("mc_embed_signup");
+    available = $(document).height();
+    percentage_of_page = 0.2;
+    graph_popup_start = available * percentage_of_page;
+    //graph_popup_end = available * .3;
+    presentation_popup_start = available * .6;
+    presentation_popup_stop = available * .68;
+    height = $(window).scrollTop();
+    if (((height > graph_popup_start)&&(height<=presentation_popup_start))) {
+      if (stop_scroll_popup==false){
+        popup.style.display = "block";
+      }
+      else{
+        popup.style.display = "none";
+      }
+    } 
+    else if (((height > presentation_popup_start)&&(height<=presentation_popup_stop))){
+      if (showAgain==true){
+        popup.style.display = "block";
+      }
+    }
+    else {
+        popup.style.display = "none";
+    }
+});
+  document.cookie = "MCPopupSubscribed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+  document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+
+
+  document.getElementById("SOF_presentation").addEventListener("click", function(){toggleSubscriptionEntry('SoF')});
   document.getElementById("payments_presentation").addEventListener("click", function(){toggleSubscriptionEntry('payments')});
   document.getElementById("banking_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking')});
   document.getElementById("WAM_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking')});
@@ -4806,7 +4836,11 @@ document.getElementById("WAM_presentation").onclick = function(){
 		 } else if ( "reset" === event.type && mc1Submitted ) {
       document.getElementById("mc_embed_signup").style.display = "none"
       showAgain = false;
-      if (deep_dive_section =='payments'){
+      if (deep_dive_section =='SoF'){
+        document.getElementById("presentation_download").href = "State of Fintech (SoF).pdf"
+        document.getElementById("presentation_download").download = "State of Fintech (SoF).pdf"
+      }
+      else if (deep_dive_section =='payments'){
         document.getElementById("presentation_download").href = "SoF - Payments.pdf"
         document.getElementById("presentation_download").download = "SoF - Payments.pdf"
       }
