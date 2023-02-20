@@ -3,12 +3,15 @@
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- CSS only -->
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/1429371588554bec356ef353d/07751bcbb6ea019136a0d069c.js");</script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <script src="lodash.js"></script>
-
+    <script data-main="scripts/app" src="scripts/require.js"></script>
+    <!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/1429371588554bec356ef353d/07751bcbb6ea019136a0d069c.js");</script> -->
     <script src="sorttable.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
@@ -75,55 +78,39 @@ crossorigin="anonymous">
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;  z-index: 1;}
+	#mc_embed_signup{background:#EEEEEE; font:18px "Nantes",serif;  width:35%;  z-index: 5000; border-radius: 25px;}
   .popup{
   display: none;
-  margin: auto;
-  margin-top: -35%;
-  margin-bottom: 20%;
-  background:#fff;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
-.close-button {
+.btn-close {
     outline: none;
     opacity: 0.3;
+    margin-left: 2%;
+    margin-top: 2%;
 }
-  @media screen and (max-height: 850px) 
-  {
-    .popup{
-      margin-top: -44%;
-  }
-  }
   @media screen and (max-width: 1250px) 
   {
-    .popup{
-      margin-top: -50%;
-  }
+    #mc_embed_signup{width:55%; font:12px "Nantes",serif; max-height: 400px;}
   }
   @media screen and (max-width: 1000px) 
   {
-    .popup{
-      margin-top: -52%;
-  }
+    #mc_embed_signup{width:65%;}
   }
   @media screen and (max-width: 850px) 
   {
-    .popup{
-      margin-top: -60%;
-  }
+    #mc_embed_signup{width:75%;}
   }
   @media screen and (max-width: 600px) 
   {
-    #mc_embed_signup{width:90%;}
-    .popup{
-      margin-top: -70%;
-  }
+    #mc_embed_signup{width:80%;}
   }
   @media screen and (max-width: 475px) 
   {
     #mc_embed_signup{width:80%;}
-    .popup{
-      margin-top: -100%;
-  }
   }
   /* .popup .show {
   visibility: visible !important;
@@ -874,6 +861,7 @@ path {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  
 }
 @media screen and (max-width: 600px){
   .dd_toggle {
@@ -3781,13 +3769,13 @@ d3.csv("Indexes.csv", function(error, data) {
   .append("svg")
     .attr("viewBox", "0 0 " + (width_new + margin_new.left + margin_new.right) + " " + (height_new + margin_new.top + margin_new.bottom))
     .attr("preserveAspectRatio", "xMinYMid meet")
-    .classed("svg-style_new", true)
+    .classed("svg-style", true)
       // .attr("width", width + margin.left + margin.right)
       // .attr("height", height + margin.top + margin.bottom)
   .append("g")
       .attr("transform", 
             "translate(" + margin_new.left + "," + margin_new.top + ")")
-      .classed("g-style", true);
+      .classed("g-style_new", true);
   // gridlines in x axis function
   function make_x_axis() {        
       return d3.svg_new.axis()
@@ -4046,7 +4034,6 @@ d3.csv("Indexes.csv", function(error, data) {
       // worstGrowth = []
       // averageGrowth = []
       // bestGrowth = []
-      console.log(filtered_ft_multiples)
       cleaned_multiples = []
       categories = ["Less than 20%","Between 20%40%","Greater than 40%"]
       var multiple_ds = [];
@@ -4431,7 +4418,7 @@ $(document).ready(function() {
     setTimeout(function(){
       updateAllTime_new();
       console.log('Loaded multiples graph')
-    },3001); 
+    },1001); 
 });
     </script>
         <div class="legend" id="performance">
@@ -4524,50 +4511,22 @@ SOFTWARE. -->
   <h2 class="section_headers" id = "future">Potential Future Additions</h2>
 </div>
 <div class = "future_additions">
-  <div class="mobile-container">
-
-    <!-- Top Navigation Menu -->
+  <!-- <div class="mobile-container">
     <div class="topnav">
       <a href="#home" class="active" onclick="myDropdown()">&lt; 3 Months Since Listing</a>
       <div id="myLinks">
-        <!-- <a href="https://www.moneylion.com/">&#10070; Money Lion</a>
-        <a href="https://www.bakkt.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Bakkt</a>
-        <a href="https://www.nerdwallet.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> NerdWallet</a>
-        <a href="https://nubank.com.br/en/"style = "vertical-align: middle;"><div class="parallelogram"></div> NuBank</a>
-        <a href="avidxchange.com"style = "vertical-align: middle;"><div class="parallelogram"></div> AvidXchange</a>
-        <a href="https://dave.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Dave</a> -->
       </div>
     </div>
     
-    <!-- End smartphone / tablet look -->
   </div>
-  <!-- <div class="mobile-container">
-    <div class="topnav">
-      <a href="#home" class="active" onclick="myDropdown2()">Announced Traditional IPOs</a>
-      <div id="myLinks2">
-        <a href="https://nubank.com.br/en/"style = "vertical-align: middle;"><div class="parallelogram"></div> NuBank</a>
-        <a href="https://www.expensify.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Expensify</a>
-      </div>
-    </div>
-  </div> -->
   <div class="mobile-container">
-
-    <!-- Top Navigation Menu -->
     <div class="topnav">
       <a href="#home" class="active" onclick="myDropdown3()">Announced IPOs, SPACs, & DLs</a>
       <div id="myLinks3">
-        
-        <!-- <a href="https://www.expensify.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Expensify</a>
-        <a href="https://www.etoro.com/en-us/"style = "vertical-align: middle;"><div class="parallelogram"></div> eToro</a>
-        <a href="https://www.aspiration.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Aspiration</a>
-        <a href="https://www.apexfintechsolutions.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Apex</a>
-        <a href="https://better.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Better</a>
-        <a href="https://better.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Acorns</a>
-        <a href="https://finaccel.co/"style = "vertical-align: middle;"><div class="parallelogram"></div> FinAccel</a> -->
+      
       </div>
     </div>
-    <!-- End smartphone / tablet look -->
-  </div>
+  </div> -->
   <div class="mobile-container">
 
     <!-- Top Navigation Menu -->
@@ -4584,6 +4543,22 @@ SOFTWARE. -->
         <a href="https://www.brex.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Brex</a>
         <a href="https://www.deel.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Deel</a>
         <a href="https://gusto.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Gusto</a>
+      </div>
+    </div>
+    <!-- End smartphone / tablet look -->
+  </div>
+  <div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="#home" class="active" onclick="myDropdown4()">Companies Removed from Index</a>
+      <div id="myLinks4">
+        <a href="https://www.avalara.com/us/en/index.html"style = "vertical-align: middle;"><div class="parallelogram"></div> Avalara</a>
+        <a href="https://www.billtrust.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Billtrust</a>
+        <a href="https://katapult.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Katapult</a>
+        <a href="https://www.metromile.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Metromile</a>
+        <a href="https://www.joinroot.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Root Insurance</a>
+        <a href="https://sezzle.com/"style = "vertical-align: middle;"><div class="parallelogram"></div> Sezzle</a>
       </div>
     </div>
     <!-- End smartphone / tablet look -->
@@ -4662,10 +4637,13 @@ SOFTWARE. -->
 </div>
 <!-- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRqv1L86HOgTAvddIP2R-BrCGyf9E9ibKDTeaFv8GyKL6kzxgoAic5CmTEP-CCqhXJBS6_b_UK4khFO/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="670" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe> -->
 <div class = "dd_toggle">
-  <button class="base-button" style = "max-width: 170px; min-height: 68px; margin-left: 8px;" id = "SOF_presentation">
-    <span class="base-button__text">State of Fintech</span>
+  <button class="base-button" style = "max-width: 170px; min-height: 68px; margin-left: 8px;" id = "2022_SOF_presentation">
+    <span class="base-button__text">2022 State of Fintech</span>
   </button>
-  <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "payments_presentation">
+  <button class="base-button" style = "max-width: 170px; min-height: 68px; margin-left: 8px;" id = "2021_SOF_presentation">
+    <span class="base-button__text">2021 State of Fintech</span>
+  </button>
+  <!-- <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "payments_presentation">
     <span class="base-button__text">Payments</span>
 </button>
   <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "banking_presentation">
@@ -4673,47 +4651,57 @@ SOFTWARE. -->
   </button>
   <button class="base-button" style = "max-width: 170px;  min-height: 68px; margin-left: 8px;" id = "WAM_presentation">
     <span class="base-button__text">Wealth & Asset. Mgmt</span>
-  </button>
+  </button> -->
 </div>
 <script>
-document.getElementById("SOF_presentation").onclick = function(){
-    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vSb5TCJK8fumtnZCYPDsEueEV1lhqLJM-LYc5DX3bNWF4ncb0wqqqCjp5CmTdksgraswnKiiLicoBcR/embed?start=false&loop=false&delayms=60000"
+document.getElementById("2022_SOF_presentation").onclick = function(){
+    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vSsz3Kh9q4zxDemooHYe66ZG5VXY0iUKCHVi8vfVM9464cKwGyQlVaUt7nsWjAjHUK0Qk6etzFpZISC/embed?start=false&loop=false&delayms=60000"
+    // document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vSb5TCJK8fumtnZCYPDsEueEV1lhqLJM-LYc5DX3bNWF4ncb0wqqqCjp5CmTdksgraswnKiiLicoBcR/embed?start=false&loop=false&delayms=60000"
     if (showAgain ==false) {
-    document.getElementById("presentation_download").href = "State of Fintech (SoF).pdf"
-    document.getElementById("presentation_download").download = "State of Fintech (SoF).pdf"
+    document.getElementById("presentation_download").href = "2022 State of Fintech Report.pdf"
+    document.getElementById("presentation_download").download = "2022 State of Fintech Report.pdf"
     }
 };
-  document.getElementById("payments_presentation").onclick = function(){
-    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vQeQXY4ZhJu8zZvRxvGXEOsROWwjP300nlnfdNnDwtVv6f5YDq0rFIrBW0pv_bkIaefZq74OykP1dm1/embed?start=false&loop=false&delayms=60000"
+document.getElementById("2021_SOF_presentation").onclick = function(){
+    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vSPrZVJVbw6qo4FusyqSrqii-U2vqXyfEWhkdJKM8zVEw60sxyN7h5PHB9shXQZY9-dP7JZYqB9TY3q/embed?start=false&loop=false&delayms=60000"
     if (showAgain ==false) {
-    document.getElementById("presentation_download").href = "SoF - Payments.pdf"
-    document.getElementById("presentation_download").download = "SoF - Payments.pdf"
-    }
-    //showPopup();
-};
-document.getElementById("banking_presentation").onclick = function(){
-    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vRM8XQWoJT8ROOzOmj-HgAu7D2uM8WnQov4y8EWhQPGNgINBeASybKX8wz1QDCTgNYJMPgLkRMX1cJX/embed?start=false&loop=false&delayms=60000"
-    if (showAgain ==false) {
-    document.getElementById("presentation_download").href = "SoF - Banking.pdf"
-    document.getElementById("presentation_download").download = "SoF - Banking.pdf"
+    document.getElementById("presentation_download").href = "All 2021 State of Fintech Reports.pdf"
+    document.getElementById("presentation_download").download = "All 2021 State of Fintech Reports.pdf"
     }
     //showPopup();
 };
-document.getElementById("WAM_presentation").onclick = function(){
-    document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vRQXHiiaCNWCNAH4K2NB4JO2g6AjIeljnZb-KOmkcMOY4rY5m_MOOLeLJrrXLjxYwYKAtoyXXEBVAIK/embed?start=false&loop=false&delayms=60000"
-    if (showAgain ==false) {
-    document.getElementById("presentation_download").href = "SoF - WAM.pdf"
-    document.getElementById("presentation_download").download = "SoF - WAM.pdf"
-    }
-    //showPopup();
-};
+//   document.getElementById("payments_presentation").onclick = function(){
+//     document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vQeQXY4ZhJu8zZvRxvGXEOsROWwjP300nlnfdNnDwtVv6f5YDq0rFIrBW0pv_bkIaefZq74OykP1dm1/embed?start=false&loop=false&delayms=60000"
+//     if (showAgain ==false) {
+//     document.getElementById("presentation_download").href = "SoF - Payments.pdf"
+//     document.getElementById("presentation_download").download = "SoF - Payments.pdf"
+//     }
+//     //showPopup();
+// };
+// document.getElementById("banking_presentation").onclick = function(){
+//     document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vRM8XQWoJT8ROOzOmj-HgAu7D2uM8WnQov4y8EWhQPGNgINBeASybKX8wz1QDCTgNYJMPgLkRMX1cJX/embed?start=false&loop=false&delayms=60000"
+//     if (showAgain ==false) {
+//     document.getElementById("presentation_download").href = "SoF - Banking.pdf"
+//     document.getElementById("presentation_download").download = "SoF - Banking.pdf"
+//     }
+//     //showPopup();
+// };
+// document.getElementById("WAM_presentation").onclick = function(){
+//     document.getElementById("google_iframe").src = "https://docs.google.com/presentation/d/e/2PACX-1vRQXHiiaCNWCNAH4K2NB4JO2g6AjIeljnZb-KOmkcMOY4rY5m_MOOLeLJrrXLjxYwYKAtoyXXEBVAIK/embed?start=false&loop=false&delayms=60000"
+//     if (showAgain ==false) {
+//     document.getElementById("presentation_download").href = "SoF - WAM.pdf"
+//     document.getElementById("presentation_download").download = "SoF - WAM.pdf"
+//     }
+//     //showPopup();
+// };
 
 </script>
 
-
-<iframe id = "google_iframe" src="https://docs.google.com/presentation/d/e/2PACX-1vSb5TCJK8fumtnZCYPDsEueEV1lhqLJM-LYc5DX3bNWF4ncb0wqqqCjp5CmTdksgraswnKiiLicoBcR/embed?start=false&loop=false&delayms=60000" frameborder="0" width="950" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe>
+<!-- <iframe id = "google_iframe" src="https://docs.google.com/presentation/d/e/2PACX-1vSb5TCJK8fumtnZCYPDsEueEV1lhqLJM-LYc5DX3bNWF4ncb0wqqqCjp5CmTdksgraswnKiiLicoBcR/embed?start=false&loop=false&delayms=60000" frameborder="0" width="950" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe> -->
+<iframe id = "google_iframe" src="https://docs.google.com/presentation/d/e/2PACX-1vSsz3Kh9q4zxDemooHYe66ZG5VXY0iUKCHVi8vfVM9464cKwGyQlVaUt7nsWjAjHUK0Qk6etzFpZISC/embed?start=false&loop=false&delayms=60000" frameborder="0" width="950" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class = "slides_frame"></iframe>
 <div class = "sof_download">
-  <a class="base-button" id = "presentation_download" style = "max-width: 70px;" href = "State of Fintech (SoF).pdf" download = "State of Fintech (SoF).pdf">
+  <!-- <a class="base-button" id = "presentation_download" style = "max-width: 70px;" onclick="downloadMessage()"> -->
+  <a class="base-button" id = "presentation_download" style = "max-width: 70px;">
     <span class="base-button__text"><i class="fa fa-download"></i>Download</span>
   </a>
 </div>
@@ -4723,53 +4711,28 @@ document.getElementById("WAM_presentation").onclick = function(){
   </button>
   <form action="https://fprimecapital.us11.list-manage.com/subscribe/post?u=1429371588554bec356ef353d&amp;id=949b4fa4d6&amp;f_id=00d18ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-      <h2>Subscribe</h2>
-      <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
+      <h2 class = 'section_headers' style = "font-size: 1.8em; margin-left: 5%;" id = "popup_title"><div class="parallelogram" style = 'background:#000; margin-right: 15px;margin-bottom: 5px;transform: skew(-15deg, 0deg);	width: 10px; height: 20px;'></div>Subscribe</h2>
+
+<div class="mc-field-group" style = "margin-left: 5%; width: 80%;">
 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 </label>
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
 <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 </div>
-<div class="mc-field-group input-group">
-  <strong>Fintech verticals you're most interested in: </strong>
-  <ul style = "display: inline-block !important; margin:auto;"><li>
-  <input type="checkbox" value="1" name="group[34178][1]" id="mce-group[34178]-34178-0">
-  <label for="mce-group[34178]-34178-0">Banking</label>
-</li>
-<li>
-  <input type="checkbox" value="2" name="group[34178][2]" id="mce-group[34178]-34178-1">
-  <label for="mce-group[34178]-34178-1">Payments</label>
-</li>
-<li>
-  <input type="checkbox" value="4" name="group[34178][4]" id="mce-group[34178]-34178-2">
-  <label for="mce-group[34178]-34178-2">Wealth and Asset Management</label>
-</li>
-<li>
-  <input type="checkbox" value="8" name="group[34178][8]" id="mce-group[34178]-34178-3">
-  <label for="mce-group[34178]-34178-3">Insurtech</label>
-</li>
-<li>
-  <input type="checkbox" value="16" name="group[34178][16]" id="mce-group[34178]-34178-4">
-  <label for="mce-group[34178]-34178-4">Lending</label>
-</li>
-<li>
-  <input type="checkbox" value="32" name="group[34178][32]" id="mce-group[34178]-34178-5">
-  <label for="mce-group[34178]-34178-5">Property Tech/Real Estate</label>
-</li>
-<li>
-  <input type="checkbox" value="64" name="group[34178][64]" id="mce-group[34178]-34178-6">
-  <label for="mce-group[34178]-34178-6">Crypto/Web3</label>
-</li>
-</ul>
-  <span id="mce-group[34178]-HELPERTEXT" class="helper_text">Select all that apply</span>
-</div>
+<!-- <div class="mc-field-group input-group"> </div> -->
+
 <div id="mce-responses" class="clear">
   <div class="response" id="mce-error-response" style="display:none"></div>
   <div class="response" id="mce-success-response" style="display:none"></div>
 </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1429371588554bec356ef353d_949b4fa4d6" tabindex="-1" value=""></div>
-  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  <div class="clear" style = "margin-left: 5%; width: 80%;">
+    <!-- <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"> -->
+    <!-- <a class="base-button" id = "presentation_download" style = "max-width: 70px;"></a> -->
+    <button type="submit" class="base-button" style = "max-width: 120px;  min-height: 20px; margin-left: 8px;" id = "mc-embedded-subscribe">
+      <span class="base-button__text" style = "font-family: MessinaSans, serif;">Submit</span>
+    </button>
+  </div>
   </div>
 </form>
 </div>
@@ -4780,44 +4743,203 @@ document.getElementById("WAM_presentation").onclick = function(){
 
 <script>
   var showAgain = true
-  var deep_dive_section = 'payments'
-  function toggleSubscriptionEntry(deep_dive){
-    deep_dive_section  = deep_dive
+  var stop_scroll_popup = false
+  var allow_submit_download = false
+  var deep_dive_section = '2022_SoF'
+  //eraseCookie("subscription_cookie")
+  var pref = getCookie('subscription_cookie');
+  if (pref == "have subscribed"){
+    document.getElementById("presentation_download").href = "2022 State of Fintech Report.pdf"
+    document.getElementById("presentation_download").download = "2022 State of Fintech Report.pdf"
+  }
+  function toggleSubscriptionEntry(deep_dive,download_button){
+    if (download_button == false){
+      deep_dive_section = deep_dive
+      if (pref == "have subscribed"){
+        if (deep_dive_section =='2022_SoF'){
+          document.getElementById("presentation_download").href = "2022 State of Fintech Report.pdf"
+          document.getElementById("presentation_download").download = "2022 State of Fintech Report.pdf"
+        }
+        else if (deep_dive_section =='2021_SoF'){
+          document.getElementById("presentation_download").href = "All 2021 State of Fintech Reports.pdf"
+          document.getElementById("presentation_download").download = "All 2021 State of Fintech Reports.pdf"
+        }
+      }
+    }
+    else{
     var popup = document.getElementById("mc_embed_signup");
-    if (((popup.style.display == "none")|(popup.style.display == ""))&(showAgain==true)) {
+    if (((popup.style.display == "none")|(popup.style.display == ""))&&(showAgain==true)&&(stop_scroll_popup ==true)&&(pref!="have subscribed")) {
+      stop_scroll_popup = false;
       popup.style.display = "block";
+      document.getElementById("popup_title").innerHTML = "<div class='parallelogram' style = 'background:#000; margin-right: 15px;margin-bottom: 5px;transform: skew(-15deg, 0deg);	width: 10px; height: 20px;'></div>Subscribe to Download"
     } 
+    }
     // popup.classList.toggle("show");
   }
+
   function closePopUp(){
     var popup = document.getElementById("mc_embed_signup");
     popup.style.display = "none";
+    stop_scroll_popup = true;
+    allow_submit_download = true;
   };
 
-  document.getElementById("payments_presentation").addEventListener("click", function(){toggleSubscriptionEntry('payments')});
-  document.getElementById("banking_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking')});
-  document.getElementById("WAM_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking')});
+  function downloadMessage(){
+    if (showAgain == true){
+    alert("Please subscribe to our email content in order to download our presentations");
+    }
+  };
+
+  function download(presentation_code,allow_download) {
+    if (allow_download==true){
+        if (presentation_code =='2022_SoF'){
+          file = "2022 State of Fintech Report.pdf"
+          name = "2022 State of Fintech Report.pdf"
+        }
+        else if (presentation_code =='2021_SoF'){
+          file = "All 2021 State of Fintech Reports.pdf"
+          name = "All 2021 State of Fintech Reports.pdf"
+        }
+        // else if (presentation_code =='payments'){
+        //   file = "SoF - Payments.pdf"
+        //   name = "SoF - Payments.pdf"
+        // }
+        // else if (presentation_code =='banking'){
+        //   file = "SoF - Banking.pdf"
+        //   name = "SoF - Banking.pdf"
+        // }
+        // else{
+        //   file = "State of Fintech - WAM section.pdf"
+        //   name = "SoF - WAM.pdf"
+        // }
+        //creating an invisible element
+        var element = document.createElement('a');
+        element.setAttribute('href',
+        'data:text/plain;charset=utf-8, '
+        + encodeURIComponent(text));
+        element.setAttribute('download', file);
+    
+        // Above code is equivalent to
+        // <a href="path of file" download="file name">
+    
+        document.body.appendChild(element);
+    
+        //onClick property
+        element.click();
+    
+        document.body.removeChild(element);
+         }
+        }
+
+  $(window).scroll(function (e) {
+    if (pref!="have subscribed"){
+    var popup = document.getElementById("mc_embed_signup");
+    available = $(document).height();
+    percentage_of_page = 0.2;
+    graph_popup_start = available * percentage_of_page;
+    //graph_popup_end = available * .3;
+    presentation_popup_start = available * .6;
+    presentation_popup_stop = available * .68;
+    height = $(window).scrollTop();
+    if (height > graph_popup_start) {
+      if (stop_scroll_popup==false){
+        popup.style.display = "block";
+      }
+      else{
+        popup.style.display = "none";
+      }
+    } 
+    // else if (((height > presentation_popup_start)&&(height<=presentation_popup_stop))){
+    //   if (showAgain==true){
+    //     popup.style.display = "block";
+    //   }
+    // }
+    else {
+        popup.style.display = "none";
+    }
+  }
+});
+  // document.cookie = "MCPopupSubscribed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+  // document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+  // var fileContent = "My epic novel that I don't want to lose.";
+  // var bb = new Blob([fileContent ], { type: 'text/plain' });
+  // var a = document.createElement('a');
+  // a.download = 'download.txt';
+  // a.href = window.URL.createObjectURL(bb);
+  // a.click();
+  function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function eraseCookie(cname) {   
+    document.cookie = cname +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+// pref = getCookie('subscription_cookie');
+// console.log(pref)
+
+// pref = getCookie('subscription_cookie');
+// console.log(pref)
+
+  document.getElementById("2022_SOF_presentation").addEventListener("click", function(){toggleSubscriptionEntry('2022_SoF',false)});
+  document.getElementById("2021_SOF_presentation").addEventListener("click", function(){toggleSubscriptionEntry('2021_SoF',false)});
+  // document.getElementById("payments_presentation").addEventListener("click", function(){toggleSubscriptionEntry('payments',false)});
+  // document.getElementById("banking_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking',false)});
+  // document.getElementById("WAM_presentation").addEventListener("click", function(){toggleSubscriptionEntry('banking',false)});
+  document.getElementById('presentation_download').addEventListener("click", function(){toggleSubscriptionEntry('',true)});
+  document.getElementById('mc-embedded-subscribe').addEventListener("click", function(){download(deep_dive_section,allow_submit_download)});
   document.getElementById("popup-close").addEventListener("click", function(){closePopUp()});
 	var mc1Submitted = false;
 	jQuery('#mc-embedded-subscribe-form').on('submit reset', function (event) {
 		console.log(event);
 		 if ("submit" === event.type) {
 		 	mc1Submitted = true;
+       stop_scroll_popup = true;
+       let have_subscribed = "have subscribed"; //Or bool, or int
+        let daysToExists = 180; //how many days cookie will be valid
+        setCookie('subscription_cookie', have_subscribed, daysToExists);
 		 } else if ( "reset" === event.type && mc1Submitted ) {
       document.getElementById("mc_embed_signup").style.display = "none"
       showAgain = false;
-      if (deep_dive_section =='payments'){
-        document.getElementById("presentation_download").href = "SoF - Payments.pdf"
-        document.getElementById("presentation_download").download = "SoF - Payments.pdf"
+      if (deep_dive_section =='2022_SoF'){
+        document.getElementById("presentation_download").href = "2022 State of Fintech Report.pdf"
+        document.getElementById("presentation_download").download = "2022 State of Fintech Report.pdf"
       }
-      else if (deep_dive_section =='banking'){
-        document.getElementById("presentation_download").href = "SoF - Banking.pdf"
-        document.getElementById("presentation_download").download = "SoF - Banking.pdf"
+      else if (deep_dive_section =='2021_SoF'){
+        document.getElementById("presentation_download").href = "All 2021 State of Fintech Reports.pdf"
+        document.getElementById("presentation_download").download = "All 2021 State of Fintech Reports.pdf"
       }
-      else{
-        document.getElementById("presentation_download").href = "State of Fintech - WAM section.pdf"
-        document.getElementById("presentation_download").download = "SoF - WAM.pdf"
-      }
+      // else if (deep_dive_section =='payments'){
+      //   document.getElementById("presentation_download").href = "SoF - Payments.pdf"
+      //   document.getElementById("presentation_download").download = "SoF - Payments.pdf"
+      // }
+      // else if (deep_dive_section =='banking'){
+      //   document.getElementById("presentation_download").href = "SoF - Banking.pdf"
+      //   document.getElementById("presentation_download").download = "SoF - Banking.pdf"
+      // }
+      // else{
+      //   document.getElementById("presentation_download").href = "State of Fintech - WAM section.pdf"
+      //   document.getElementById("presentation_download").download = "SoF - WAM.pdf"
+      // }
 		 }
 	});
 </script>
@@ -4843,7 +4965,7 @@ document.getElementById("WAM_presentation").onclick = function(){
     </a>
   </div>
 </div>
-<img class = 'fintech_images' src="fprime_fintech_logos.png">
+<img class = 'fintech_images' src="fprime_fintech_logos_2.png">
 
 <!-- <div class= 'future-ipo-img'>
   <img src="Future Additions.PNG">
