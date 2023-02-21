@@ -4795,11 +4795,11 @@ document.getElementById("2021_SOF_presentation").onclick = function(){
     if (allow_download==true){
         if (presentation_code =='2022_SoF'){
           file = "2023 State of Fintech Report.pdf"
-          name = "2023 State of Fintech Report.pdf"
+          name = "2023 State of Fintech Report"
         }
         else if (presentation_code =='2021_SoF'){
           file = "All 2022 State of Fintech Reports.pdf"
-          name = "All 2022 State of Fintech Reports.pdf"
+          name = "All 2022 State of Fintech Reports"
         }
         // else if (presentation_code =='payments'){
         //   file = "SoF - Payments.pdf"
@@ -4817,7 +4817,8 @@ document.getElementById("2021_SOF_presentation").onclick = function(){
         var element = document.createElement('a');
         element.setAttribute('href',
         'data:text/plain;charset=utf-8, '
-        + encodeURIComponent(text));
+        + encodeURIComponent(name));
+        element.setAttribute("href",file);
         element.setAttribute('download', file);
     
         // Above code is equivalent to
