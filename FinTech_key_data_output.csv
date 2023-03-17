@@ -1,56 +1,56 @@
 Company,Ticker,Vertical,Price,Market Cap ($B),Revenue Growth,Gross Margin,EV/Revenue,YTD Performance
-Adyen,ADYEY,Payments,14.78,43.5,59.0,15.8,5.5,7.1
-Affirm,AFRM,Lending,9.84,2.9,49.0,48.7,4.5,8.1
-Alkami Technology,ALKT,B2B SaaS,12.53,1.1,34.0,53.0,6.4,-15.3
-Bill.com,BILL,B2B SaaS,76.51,8.1,143.0,79.8,10.1,-30.0
-Blackline,BL,B2B SaaS,63.96,3.8,23.0,75.3,8.3,-5.7
-Bright Health,BHG,Insurance,0.36,0.2,75.0,4.3,0.2,-35.8
-Clover Health,CLOV,Insurance,0.92,0.4,163.0,,0.0,-2.9
-Coinbase,COIN,Wealth/Asset Mgmt,64.47,14.6,-15.0,80.3,3.9,91.9
-Compass,COMP,PropTech,2.97,1.3,8.0,17.8,0.3,33.8
-dLocal,DLO,Payments,15.02,4.4,86.0,49.4,10.5,-2.3
-Doma,DOMA,PropTech,0.42,0.1,-10.0,40.2,0.5,2.2
-Duck Creek,DCT,B2B SaaS,18.94,2.5,13.0,56.6,7.3,52.5
-Envestnet,ENV,B2B SaaS,52.96,2.9,12.0,62.2,3.3,-14.2
-EverQuote,EVER,Insurance,13.09,0.4,1.0,94.1,1.0,-7.6
-FleetCor,FLT,Payments,189.22,14.0,26.0,77.7,6.2,3.3
-Flywire,FLYW,Payments,26.9,2.9,46.0,63.5,9.9,12.4
-Funding Circle,FCH,Lending,61.6,0.2,-18.0,95.3,0.6,-5.4
-Green Dot,GDOT,Banking,15.84,0.8,3.0,50.0,0.1,0.6
-Hippo Insurance,HIPO,Insurance,14.05,0.3,54.0,,1.8,-3.4
-Intapp Inc.,INTA,B2B SaaS,39.78,2.5,27.0,66.0,8.3,54.8
-Lemonade,LMND,Insurance,13.5,0.9,94.0,,3.0,-1.7
-Lightspeed POS Inc.,LSPD,Payments,14.52,2.2,69.0,45.4,2.2,2.3
+Adyen,ADYEY,Payments,15.34,45.1,59.0,15.8,5.3,11.1
+Affirm,AFRM,Lending,9.96,2.9,49.0,48.7,4.5,9.5
+Alkami Technology,ALKT,B2B SaaS,12.45,1.1,34.0,53.0,6.4,-15.8
+Bill.com,BILL,B2B SaaS,76.63,8.1,143.0,79.8,10.1,-29.9
+Blackline,BL,B2B SaaS,66.15,4.0,23.0,75.3,,-2.5
+Bright Health,BHG,Insurance,0.31,0.2,75.0,4.3,0.2,-44.5
+Clover Health,CLOV,Insurance,0.94,0.4,163.0,,0.0,-1.3
+Coinbase,COIN,Wealth/Asset Mgmt,67.78,15.4,-15.0,80.3,3.9,101.7
+Compass,COMP,PropTech,3.06,1.3,8.0,17.8,0.3,37.8
+dLocal,DLO,Payments,14.28,4.2,86.0,49.4,10.5,-7.1
+Doma,DOMA,PropTech,0.41,0.1,-10.0,40.2,0.5,-0.7
+Duck Creek,DCT,B2B SaaS,18.97,2.5,13.0,56.6,7.3,52.7
+Envestnet,ENV,B2B SaaS,53.73,3.0,12.0,62.2,3.3,-13.0
+EverQuote,EVER,Insurance,12.97,0.4,1.0,94.1,1.0,-8.4
+FleetCor,FLT,Payments,191.96,14.2,26.0,77.7,6.2,4.8
+Flywire,FLYW,Payments,27.93,3.0,46.0,63.5,9.9,16.7
+Funding Circle,FCH,Lending,63.51,0.2,-18.0,96.9,0.6,-2.5
+Green Dot,GDOT,Banking,16.35,0.9,3.0,50.0,0.1,3.8
+Hippo Insurance,HIPO,Insurance,14.68,0.3,54.0,,1.8,1.0
+Intapp Inc.,INTA,B2B SaaS,40.74,2.6,27.0,66.0,8.3,58.6
+Lemonade,LMND,Insurance,14.06,1.0,94.0,,,2.4
+Lightspeed POS Inc.,LSPD,Payments,14.83,2.2,69.0,45.4,2.2,4.4
 LoanDepot,LDI,Lending,1.79,0.6,-64.0,,,9.8
-Lufax,LU,Lending,1.88,4.3,10.0,,,-9.6
-Marqeta,MQ,Payments,4.07,2.2,56.0,42.8,1.3,-30.7
-MercadoLibre,MELI,Payments,1188.96,59.8,54.0,49.0,6.2,43.9
-MoneyLion,ML,Banking,0.57,0.2,118.0,81.1,1.6,-5.6
-nCino,NCNO,Banking,22.16,2.5,46.0,58.3,7.8,-16.2
-Olo,OLO,Payments,7.51,1.2,25.0,69.0,4.5,14.5
-OpenDoor,OPEN,PropTech,1.62,1.0,272.0,4.3,0.3,47.3
-Oscar Health,OSCR,Insurance,3.51,0.8,144.0,,,42.7
-PagSeguro,PAGS,Payments,8.29,2.7,57.0,16.1,0.3,0.6
-Paymentus,PAY,Payments,7.83,1.0,28.0,30.1,1.8,-4.3
-Payoneer,PAYO,Payments,6.15,2.2,36.0,82.4,3.0,13.3
-Paypal,PYPL,Payments,73.91,84.3,10.0,50.1,3.1,-0.9
-Q2 Holdings,QTWO,B2B SaaS,23.18,1.3,16.0,45.3,3.8,-14.7
-Redfin,RDFN,PropTech,8.45,0.9,61.0,12.5,0.8,96.1
-Shopify,SHOP,Payments,43.54,55.4,25.0,49.2,9.0,22.0
-SoFi,SOFI,Banking,5.41,5.0,57.0,,,20.2
-Square,SQ,Payments,74.07,44.3,1.0,34.2,2.5,14.6
-Stone,STNE,Payments,9.2,2.9,165.0,68.2,0.3,8.6
-Upstart,UPST,Lending,15.17,1.2,59.0,,,17.7
-Virtu Financial Inc,VIRT,Wealth/Asset Mgmt,17.78,3.2,-22.0,38.2,1.9,-14.1
-Xero,XROLF,B2B SaaS,57.0,8.6,32.0,98.8,7.8,20.7
-Robinhood,HOOD,Wealth/Asset Mgmt,9.2,8.2,-24.0,86.8,,13.9
-Blend Labs,BLND,PropTech,1.53,0.4,48.0,40.3,0.7,0.0
-Wise,WPLCF,Payments,6.35,6.3,48.0,64.0,,-6.4
-Toast,TOST,Payments,17.19,9.0,72.0,18.7,3.2,-2.1
-Remitly,RELY,Payments,15.25,2.6,48.0,50.0,3.7,35.3
-Bakkt Holdings,BKKT,Wealth/Asset Mgmt,1.16,0.1,50.0,,,0.0
-Nerdwallet,NRDS,Banking,16.78,1.2,47.0,92.6,2.8,74.1
-NuBank,NU,Banking,4.44,20.8,117.0,,,24.7
-AvidXchange,AVDX,Payments,7.67,1.5,29.0,61.5,5.0,-17.0
-Dave,DAVE,Banking,6.74,0.1,26.0,84.4,0.2,-27.1
-Expensify,EXFY,B2B SaaS,7.55,0.6,30.0,63.0,3.9,-12.0
+Lufax,LU,Lending,1.84,4.2,10.0,,,-11.5
+Marqeta,MQ,Payments,4.06,2.2,56.0,42.8,1.3,-30.8
+MercadoLibre,MELI,Payments,1214.74,61.1,54.0,49.0,6.2,47.0
+MoneyLion,ML,Banking,0.58,0.2,118.0,81.1,1.6,-4.0
+nCino,NCNO,Banking,23.64,2.6,46.0,58.3,7.8,-10.6
+Olo,OLO,Payments,7.83,1.3,25.0,69.0,4.5,19.4
+OpenDoor,OPEN,PropTech,1.67,1.1,272.0,4.3,0.3,51.8
+Oscar Health,OSCR,Insurance,3.44,0.7,144.0,,,39.8
+PagSeguro,PAGS,Payments,8.21,2.7,57.0,16.1,0.3,-0.4
+Paymentus,PAY,Payments,7.88,1.0,28.0,30.1,1.8,-3.7
+Payoneer,PAYO,Payments,6.13,2.1,36.0,82.4,3.0,12.9
+Paypal,PYPL,Payments,74.35,84.8,10.0,50.1,,-0.3
+Q2 Holdings,QTWO,B2B SaaS,24.31,1.4,16.0,45.3,3.8,-10.6
+Redfin,RDFN,PropTech,8.74,1.0,61.0,12.5,,102.8
+Shopify,SHOP,Payments,44.67,56.8,25.0,49.2,9.0,25.2
+SoFi,SOFI,Banking,5.45,5.1,57.0,,,21.1
+Square,SQ,Payments,75.09,44.9,1.0,34.2,2.5,16.2
+Stone,STNE,Payments,9.41,2.9,165.0,68.2,0.3,11.1
+Upstart,UPST,Lending,15.8,1.3,59.0,,,22.6
+Virtu Financial Inc,VIRT,Wealth/Asset Mgmt,17.96,3.3,-22.0,38.2,1.9,-13.2
+Xero,XROLF,B2B SaaS,58.5,8.9,32.0,98.8,7.8,23.9
+Robinhood,HOOD,Wealth/Asset Mgmt,9.31,8.3,-24.0,86.8,,15.2
+Blend Labs,BLND,PropTech,1.47,0.3,48.0,40.3,0.7,-3.9
+Wise,WPLCF,Payments,6.5,6.4,48.0,64.0,,-4.2
+Toast,TOST,Payments,17.41,9.1,72.0,18.7,3.2,-0.8
+Remitly,RELY,Payments,15.86,2.7,48.0,50.0,3.7,40.7
+Bakkt Holdings,BKKT,Wealth/Asset Mgmt,1.19,0.1,50.0,,,2.6
+Nerdwallet,NRDS,Banking,16.81,1.2,47.0,92.6,2.8,74.4
+NuBank,NU,Banking,4.61,21.6,117.0,,,29.5
+AvidXchange,AVDX,Payments,7.72,1.5,29.0,61.5,5.0,-16.5
+Dave,DAVE,Banking,7.03,0.1,26.0,84.4,0.2,-24.0
+Expensify,EXFY,B2B SaaS,7.89,0.6,30.0,63.0,3.9,-8.0
